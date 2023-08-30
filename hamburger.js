@@ -1,5 +1,7 @@
-const navIcon2 = document.getElementById("nav-icon1");
+const navIcon = document.getElementById("nav-icon1");
+const navMenu = document.getElementById("nav-menu-mobile")
   
-navIcon2.addEventListener("click", function() {
+navIcon.addEventListener("click", function() {
   this.classList.toggle("open");
+  navMenu.classList.toggle('translate')
 });
