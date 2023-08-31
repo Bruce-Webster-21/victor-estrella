@@ -55,7 +55,7 @@ body {
 
 .nav-item {
   color: #1f4050;
-  padding: 100% 0;
+  padding: 20% 0;
 }
 
 .nav-items:hover .nav-item {
@@ -72,7 +72,8 @@ body {
   display: flex;
   flex-direction: column;
   position: fixed;
-  background-color: #52b6e7;
+  background-color: #52b5e779;
+  backdrop-filter: blur(10px);
   padding: 80px 25px;
   text-align: center;
   transform: translateX(100%);
@@ -87,7 +88,7 @@ body {
   border: 1px solid #1f405071;
   color: #1f4050;
   padding: 15px 25px;
-  border-radius: 10px;
+  border-radius: 99px;
   transition: 0.2s;
 }
 
@@ -99,23 +100,59 @@ body {
 
 .first-main {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-direction: row-reverse;
+  padding: 20px;
+  color: #1f4050;
 }
 
-.surgeon-hand {
-  width: 700px;
+.first-main section {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+
+.first-main img {
+  width: 400px;
+  object-fit: contain;
+}
+
+.first-main h2 {
+  font-size: 1.5rem;
+}
+
+.first-main h3 {
+  padding: 10px 0 0 0;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.first-main .btn {
+  text-align: center;
+  margin: 15px 0 0 0;
+  padding: 15px;
+  border: 1px solid #1f405071;
+  border-radius: 99px;
+}
+
+.blue {
+  background-color: #1f4050;
+  color: white;
 }
 
 @media screen and (max-width: 900px) {
   .nav-menu {
     display: none;
   }
-  .nav-item {
+  .nav-item-mobile {
     color: #1f4050;
     padding: 20px 0 0 0;
   }
   .nav-item:nth-child(3) {
     padding: 20px 0 20px 0;
+  }
+  .nav-bar {
+    padding: 20px;
   }
 }
 
