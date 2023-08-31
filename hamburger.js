@@ -1,4 +1,4 @@
-const navIcon = document.getElementById("nav-icon1");
+const navIcon = document.getElementById("hamburger-menu");
 const navMenu = document.getElementById("nav-menu-mobile")
   
 navIcon.addEventListener("click", function() {
