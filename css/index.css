@@ -123,6 +123,11 @@ body {
   margin: auto 0;
 }
 
+.first-main .btn-container {
+  display: flex;
+  gap: 10px;
+}
+
 .first-main img {
   width: 400px;
   object-fit: contain;
@@ -141,7 +146,7 @@ body {
 .first-main .btn {
   text-align: center;
   margin: 15px 0 0 0;
-  padding: 15px;
+  padding: 15px 30px;
   border: 1px solid #1f405071;
   border-radius: 99px;
 }
