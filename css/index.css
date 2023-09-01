@@ -8,6 +8,18 @@
   font-family: "Raleway", sans-serif;
 }
 
+hr {
+  opacity: 0.3;
+}
+
+#page {
+  transition: 0.5s;
+}
+
+.page-translate {
+  transform: translate(-300px);
+}
+
 a {
   text-decoration: none;
 }
@@ -67,17 +79,24 @@ body {
 }
 
 .nav-menu-mobile {
-  width: 100%;
+  right: 0;
+  width: 300px;
   height: 100%;
   display: flex;
   flex-direction: column;
   position: fixed;
-  background-color: #52b5e779;
+  background-color: #e8eef6;
   backdrop-filter: blur(10px);
   padding: 80px 25px;
   text-align: center;
   transform: translateX(100%);
   transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.534) 0px 0px 30px -12px inset;
+}
+
+.nav-item-mobile {
+  color: #1f4050;
+  padding: 20px 0;
 }
 
 .translate {
@@ -144,10 +163,7 @@ body {
   .nav-menu {
     display: none;
   }
-  .nav-item-mobile {
-    color: #1f4050;
-    padding: 20px 0 0 0;
-  }
+
   .nav-item:nth-child(3) {
     padding: 20px 0 20px 0;
   }
