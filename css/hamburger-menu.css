@@ -1,8 +1,9 @@
 #hamburger-menu {
   width: 30px;
   height: 45px;
-  position: relative;
-  margin-top: 24px;
+  position: fixed;
+  right: 0;
+  margin: 41px 20px 0 0;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -12,6 +13,7 @@
   -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   cursor: pointer;
+  z-index: 1;
 }
 
 #hamburger-menu span {
