@@ -1,7 +1,7 @@
 const hamburger = document.getElementById("hamburger-menu");
-const page = document.getElementById('page')
+const navMenu = document.getElementById('nav-menu-mobile')
   
 hamburger.addEventListener("click", function() {
   this.classList.toggle("open");
-  page.classList.toggle('page-translate')
+  navMenu.classList.toggle("translate")
 });
