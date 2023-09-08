@@ -32,6 +32,11 @@
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
+.procedures-item h3 {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
 .procedures-svg {
   width: 200px;
   display: block;
