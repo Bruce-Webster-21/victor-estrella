@@ -1,0 +1,20 @@
+.paragraphs {
+  background-color: #1f4050;
+  width: 100%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding: 40px;
+}
+
+footer p {
+  opacity: 0.7;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+footer p:nth-child(2) {
+  font-size: 0.8rem;
+}

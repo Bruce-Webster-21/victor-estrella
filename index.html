@@ -7,7 +7,10 @@
   <link rel="icon" href="img/icon.png" />
   <link rel="stylesheet" href="css/hamburger-menu.css">
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/procedures-section.css">
+  <link rel="stylesheet" href="css/about-section.css">
+  <link rel="stylesheet" href="css/footer.css">
 </head>
 <body id="body">
 
@@ -17,24 +20,24 @@
       <span></span>
     </div>
 
-    <nav id="nav-menu-mobile" class="nav-menu-mobile">
-      <a class="nav-item-mobile" href="#">Home</a>
+    <nav id="nav-menu-mobile" class="nav-menu-mobile" onclick="">
+      <a class="nav-item-mobile" href="#nav">Home</a>
       <hr>
-      <a class="nav-item-mobile" href="#">About</a>
+      <a class="nav-item-mobile" href="#about">About</a>
       <hr>
       <a class="nav-item-mobile" href="#">Contact</a>
       <a class="questionnaire-btn" href="questionnaire.html" target="_blank">Take the Questionnaire</a>
     </nav>
   
-    <nav class="nav-bar">
-      <div class="logo">
+    <nav id="nav" class="nav-bar">
+      <div id="logo" class="logo">
         <img class="logo-img" src="/img/logo.png" alt="logo">
         <h1>Dr. Victor Estrella</h1>
       </div>
       <div class="flex nav-menu">
         <div class="nav-items">
-          <a class="nav-item" href="#">Home</a>
-          <a class="nav-item" href="#">About</a>
+          <a class="nav-item" href="#nav">Home</a>
+          <a class="nav-item" href="#about">About</a>
           <a class="nav-item" href="#">Contact</a>
         </div>
         <a class="questionnaire-btn" href="#">Take the Questionnaire</a>
@@ -97,7 +100,22 @@
 
         </div>
       </div>
+
+      <div id="about" class="about-section">
+        <h2>About</h2>
+        <div class="about-paragraph">
+          <img src="img/dr-victor-estrella-2.png" alt="Photo of Dr. Victor Estrella">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis minus iusto nemo beatae totam inventore dolore, quia non eius placeat sint minima sapiente, at quibusdam! Aliquam quia repellat fuga unde? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore dolorem, quo tempora eum maxime perspiciatis error eaque natus ipsa excepturi consequatur placeat hic modi rerum magnam voluptatem pariatur animi. Possimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, saepe? Eos recusandae possimus ex, nulla qui ipsam fuga itaque, omnis natus consequatur porro neque, non harum incidunt. Nisi, veritatis? Quis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, ad? Totam culpa ea possimus nisi rem tempora est voluptatum cupiditate hic. Porro dignissimos mollitia sit repudiandae fugit expedita ab pariatur! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae nemo eligendi temporibus vel voluptate molestias? Saepe quidem unde dolorum consequuntur, dicta id repellat voluptatem repudiandae animi! Delectus omnis aspernatur maiores!</p>
+        </div>
+      </div>
     </main>
+
+    <footer>
+      <div class="paragraphs">
+        <p class="copyright">© Dr. Victor Estrella 2023.</p>
+        <p id="copyright">Designed and Developed by <a class="my-referall" href="https://www.instagram.com/bruce__webster/" target="_blank"><b>Bruce Webster</b></a></p>
+      </div>
+    </footer>
 
   <script src="javascript/hamburger.js"></script>
 
