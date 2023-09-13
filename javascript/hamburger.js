@@ -7,3 +7,9 @@ hamburger.addEventListener("click", function() {
   navMenu.classList.toggle("translate")
   body.classList.toggle("no-scroll")
 });
+
+navMenu.addEventListener("click", function() {
+  this.classList.toggle("translate")
+  hamburger.classList.toggle("open");
+  body.classList.toggle("no-scroll")
+})
