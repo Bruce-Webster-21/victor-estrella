@@ -1,6 +1,6 @@
 .hidden {
   opacity: 0;
-  transform: translateY(5%);
+  transform: translateY(25%);
   transition: all 1.5s;
 }
 
