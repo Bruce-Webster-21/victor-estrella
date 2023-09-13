@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dr. Victor Estrella</title>
+
   <link rel="icon" href="img/icon.png" />
   <link rel="stylesheet" href="css/hamburger-menu.css">
   <link rel="stylesheet" href="css/whatsapp-btn.css">
+  <link rel="stylesheet" href="css/animation.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/procedures-section.css">
   <link rel="stylesheet" href="css/about-section.css">
   <link rel="stylesheet" href="css/footer.css">
+
+  <script defer src="javascript/animation.js"></script>
 </head>
 <body id="body">
 
@@ -21,7 +25,7 @@
       <span></span>
     </div>
 
-    <nav id="nav-menu-mobile" class="nav-menu-mobile" onclick="">
+    <nav id="nav-menu-mobile" class="nav-menu-mobile">
       <a class="nav-item-mobile" href="#nav">Home</a>
       <hr>
       <a class="nav-item-mobile" href="#about">About</a>
@@ -32,7 +36,7 @@
   
     <nav id="nav" class="nav-bar">
       <div id="logo" class="logo">
-        <img class="logo-img" src="/img/logo.png" alt="logo">
+        <img class="logo-img" src="img/logo.png" alt="logo">
         <h1>Dr. Victor Estrella</h1>
       </div>
       <div class="flex nav-menu">
@@ -51,8 +55,8 @@
   
     <main>
       <div class="first-main">
-        <img src="img/dr-victor-estrella-1.png" alt="Photo of Dr. Victor Estrella">
-        <section>
+        <img src="img/dr-victor-estrella-1.png" class="hidden" alt="Photo of Dr. Victor Estrella">
+        <section class="hidden">
           <h2>Reconstructive & Plastic Surgery</h2>
           <h3>"Improving your quality of life is my vocation"</h3>
           <div class="btn-container">
@@ -66,37 +70,37 @@
         <h2>Procedures</h2>
         <div class="procedures-items">
 
-          <div class="procedures-item">
+          <div class="procedures-item hidden">
             <img class="procedures-svg" src="img/icons/face.svg" alt="">
             <h3>Face</h3>
             <p>We are here to help you attain your desired look, whether you want to rejuvenate your eyes with blepharoplasty (eyelid surgery), enhance your nose with rhinoplasty, or revitalize your face with a facelift.</p>
           </div>
 
-          <div class="procedures-item">
+          <div class="procedures-item hidden">
             <img class="procedures-svg" src="img/icons/body.svg" alt="">
             <h3>Body</h3>
             <p>Liposculpture or also known as liposuction is done to enhance the appearance of your thighs, buttocks, or abdomen, or contemplating abdominoplasty for a firmer, flatter belly, we're here to help you achieve your desired results.</p>
           </div>
 
-          <div class="procedures-item">
+          <div class="procedures-item hidden">
             <img class="procedures-svg" src="img/icons/breast.svg" alt="">
             <h3>Breast</h3>
             <p>We provide a range of surgical procedures to enhance breast aesthetics, including breast augmentation, breast reduction for both women and men, breast lift, and breast reconstruction.</p>
           </div>
 
-          <div class="procedures-item">
+          <div class="procedures-item hidden">
             <img class="procedures-svg" src="img/icons/arm.svg" alt="">
             <h3>Arm</h3>
             <p>Referred to as an arm lift, this surgical procedure addresses the removal of excess skin from the upper arms. This condition is frequently attributed to significant weight loss (particularly after bariatric surgery), genetic factors, or the natural aging process.</p>
           </div>
 
-          <div class="procedures-item">
+          <div class="procedures-item hidden">
             <img class="procedures-svg" src="img/icons/leg.svg" alt="">
             <h3>Buttocks</h3>
             <p>A buttock lift enhances size and definition by removing excess fat through liposuction. Surgeons skillfully use this harvested fat to sculpt and enhance buttock shape and volume, achieving a harmonious appearance in line with beauty standards for this area.</p>
           </div>
 
-          <div class="procedures-item">
+          <div class="procedures-item hidden">
             <img class="procedures-svg" src="img/icons/other.svg" alt="">
             <h3>Other</h3>
             <p>You also have the option to undergo non-surgical treatments for facial rejuvenation. Botox is the injectable medical-aesthetic treatment we utilize to effectively combat wrinkles and diminish the signs of aging.</p>
@@ -108,8 +112,8 @@
       <div id="about" class="about-section">
         <h2>About</h2>
         <div class="about-paragraph">
-          <img src="img/dr-victor-estrella-2.png" alt="Photo of Dr. Victor Estrella">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis minus iusto nemo beatae totam inventore dolore, quia non eius placeat sint minima sapiente, at quibusdam! Aliquam quia repellat fuga unde? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore dolorem, quo tempora eum maxime perspiciatis error eaque natus ipsa excepturi consequatur placeat hic modi rerum magnam voluptatem pariatur animi. Possimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, saepe? Eos recusandae possimus ex, nulla qui ipsam fuga itaque, omnis natus consequatur porro neque, non harum incidunt. Nisi, veritatis? Quis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, ad? Totam culpa ea possimus nisi rem tempora est voluptatum cupiditate hic. Porro dignissimos mollitia sit repudiandae fugit expedita ab pariatur! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae nemo eligendi temporibus vel voluptate molestias? Saepe quidem unde dolorum consequuntur, dicta id repellat voluptatem repudiandae animi! Delectus omnis aspernatur maiores!</p>
+          <img class="hidden" src="img/dr-victor-estrella-2.png" alt="Photo of Dr. Victor Estrella">
+          <p class="hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis minus iusto nemo beatae totam inventore dolore, quia non eius placeat sint minima sapiente, at quibusdam! Aliquam quia repellat fuga unde? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore dolorem, quo tempora eum maxime perspiciatis error eaque natus ipsa excepturi consequatur placeat hic modi rerum magnam voluptatem pariatur animi. Possimus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, saepe? Eos recusandae possimus ex, nulla qui ipsam fuga itaque, omnis natus consequatur porro neque, non harum incidunt. Nisi, veritatis? Quis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, ad? Totam culpa ea possimus nisi rem tempora est voluptatum cupiditate hic. Porro dignissimos mollitia sit repudiandae fugit expedita ab pariatur! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae nemo eligendi temporibus vel voluptate molestias? Saepe quidem unde dolorum consequuntur, dicta id repellat voluptatem repudiandae animi! Delectus omnis aspernatur maiores!</p>
         </div>
       </div>
     </main>
