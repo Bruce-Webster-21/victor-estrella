@@ -1,0 +1,11 @@
+.contact-sidebar {
+  position: fixed;
+  background-color: black;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: all 0.5s;
+}
+
+.show-contact-sidebar {
+  transform: translateX(0%);
+}
