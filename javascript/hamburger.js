@@ -1,5 +1,5 @@
 const hamburger = document.getElementById("hamburger-menu");
-const navMenu = document.getElementById('nav-menu-mobile')
+const navMenu = document.getElementById('nav-mobile-container')
 const body = document.getElementById('body')
   
 hamburger.addEventListener("click", function() {
