@@ -1,8 +1,37 @@
 .contact-sidebar {
   position: fixed;
-  background-color: black;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #e8eef688;
+  backdrop-filter: blur(30px);
+  -o-backdrop-filter: blur(30px);
+  -ms-backdrop-filter: blur(30px);
+  -moz-backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
   height: 100%;
   transform: translateX(-100%);
   transition: all 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.534) 0px 0px 30px -12px;
+  -o-box-shadow: rgba(0, 0, 0, 0.534) 0px 0px 30px -12px;
+  -ms-box-shadow: rgba(0, 0, 0, 0.534) 0px 0px 30px -12px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.534) 0px 0px 30px -12px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.534) 0px 0px 30px -12px;
   z-index: 1;
+}
+
+.contact-sidebar .container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.contact-sidebar a {
+  font-size: 1.7em;
+  color: #1f4050;
+}
+
+.contact-sidebar .container a:last-child {
+  font-size: 1.5em;
 }

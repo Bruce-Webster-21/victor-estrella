@@ -20,8 +20,8 @@
   z-index: 1;
 }
 
-.btn-whatsapp-pulse img {
-  width: 28px;
+.btn-whatsapp-pulse i {
+  font-size: 0.65em;
 }
 
 @keyframes pulse {
