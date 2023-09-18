@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/hamburger-menu.css">
   <link rel="stylesheet" href="css/whatsapp-btn.css">
   <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/language-container.css">
   <link rel="stylesheet" href="css/contact-sidebar.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/nav.css">
@@ -29,44 +30,34 @@
       <span></span>
     </div>
 
-
     <div id="contact-sidebar" class="contact-sidebar">
       <div class="container">
-
         <a href="https://wa.link/q8ctjt" target="_blank">
           <i class="fa-brands fa-whatsapp"></i>
         </a>
-
         <hr>
-  
         <a href="https://www.instagram.com/dr.victorestrella/" target="_blank">
           <i class="fa-brands fa-instagram"></i>
         </a>
-
         <hr>
-  
         <a href="">
           <i class="fa-brands fa-facebook"></i>
         </a>
-
         <hr>
-  
         <a href="mailto:doctorvictorestrella@gmail.com">
           <i class="fa-regular fa-envelope"></i>
         </a>
-
       </div>
     </div>
 
-
     <nav id="nav-mobile-container" class="nav-mobile-container">
       <div id="nav-menu-mobile" class="nav-menu-mobile">
-        <a class="nav-item-mobile" href="#nav">Home</a>
+        <a id="nav-mobile-home" class="nav-item-mobile" href="#nav">Home</a>
         <hr>
-        <a class="nav-item-mobile" href="#about">About</a>
+        <a id="nav-mobile-about" class="nav-item-mobile" href="#about">About</a>
         <hr>
         <div id="contact-btn-1" class="nav-item-mobile">Contact</div>
-        <a class="questionnaire-btn" href="questionnaire.html" target="_blank">Take the Questionnaire</a>
+        <a id="nav-mobile-questionnaire-btn" class="questionnaire-btn" href="questionnaire.html" target="_blank">Take the Questionnaire</a>
       </div>
     </nav>
   
@@ -93,11 +84,15 @@
       <div class="first-main">
         <img src="img/dr-victor-estrella-1.png" class="hidden" alt="Photo of Dr. Victor Estrella">
         <section class="hidden">
-          <h2>Reconstructive & Plastic Surgery</h2>
-          <h3>"Improving your quality of life is my vocation"</h3>
+          <h2 id="first-main-title" class="first-main-title">Reconstructive & Plastic Surgery</h2>
+          <h3 id="first-main-sub-title" class="first-main-sub-title">"Improving your quality of life is my vocation"</h3>
           <div class="btn-container">
-            <a class="btn blue" href="#">Take the Questionnaire</a>
+            <a id="first-main-questionnaire-btn" class="btn blue" href="#">Take the Questionnaire</a>
             <div id="contact-btn-2" class="btn">Contact</div>
+          </div>
+          <div id="language-container" class="language-container">
+            <div id="english" language="english" class="change-language"><img  class="flag" src="img/flags/united-states.png" alt="American Flag"></div>
+            <div id="spanish" language="spanish" class="change-language not-active"><img  class="flag" src="img/flags/spain.png" alt="Spanish Flag"></div>
           </div>
         </section>
       </div>
@@ -169,6 +164,7 @@
 
   <script src="javascript/hamburger.js"></script>
   <script src="javascript/contactSidebar.js"></script>
+  <script src="javascript/chooseLanguage.js"></script>
 
 </body>
 </html>
