@@ -20,12 +20,14 @@
       <span></span>
     </div>
 
-    <nav id="nav-menu-mobile" class="nav-menu-mobile">
-      <a class="nav-item-mobile" href="index.html">Home</a>
-      <hr>
-      <a class="nav-item-mobile" href="#">About</a>
-      <hr>
-      <a class="nav-item-mobile" href="#">Contact</a>
+    <nav id="nav-mobile-container" class="nav-mobile-container">
+      <div id="nav-menu-mobile" class="nav-menu-mobile">
+        <a id="nav-mobile-home" class="nav-item-mobile" href="#nav">Home</a>
+        <hr>
+        <a id="nav-mobile-about" class="nav-item-mobile" href="#about">About</a>
+        <hr>
+        <div id="contact-btn-1" class="nav-item-mobile">Contact</div>
+      </div>
     </nav>
   
     <nav class="nav-bar">
@@ -395,22 +397,10 @@
       }).catch(console.error);
       
     });
-
-    myForm.addEventListener("submit", e => {
-      let loaderContainer = document.getElementById("loaderContainer")
-      let navBar = document.getElementById("navBar")
-
-      loaderContainer.style.display = "block"
-      myForm.style.display = "none";
-      navBar.style.display = "none"
-
-      setTimeout(thankYouShow, 25000);
-
-    });
     
   </script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
-  <script src="/javascript/questionnaire.js"></script>
+  <script src="javascript/questionnaire.js"></script>
   <script src="javascript/hamburger.js"></script>
     
 </body>
