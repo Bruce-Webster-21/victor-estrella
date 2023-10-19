@@ -48,15 +48,6 @@
 
   <div class="form-container">
 
-    <div id="thank-you" style="display: none;">
-      <img class="thank-you-img" src="img/thank-you-img.png" alt="">
-      <p class="thank-you-p"> <b>Thank you for completing the Health Questionnaire. <br> We will be contacting you briefly!!</b></p>
-
-      <p class="thank-you-p"> Gracias por completar el Cuestionario <br>¡¡Nos comunicaremos con usted en breve!!</p>
-
-      <a class="go-back-a" href="index.html">Go back</a>
-    </div>
-
     <span id="loaderContainer" class="loader-container" style="display: none;">
       <div class="loader"></div>
       <p class="please-wait">Please wait...</p>
@@ -315,93 +306,18 @@
     </form>
   </div>
 
-  <script>
-
-    const myForm = document.getElementById("myForm")
-    const inpFile = document.getElementById("inpFile")
-    const inpFile1 = document.getElementById("inpFile1")
-    const inpFile2 = document.getElementById("inpFile2")
-    const inpFile3 = document.getElementById("inpFile3")
-
-    myForm.addEventListener("submit", e => {
-      e.preventDefault();
-
-      const endpoint = "upload.php";
-      const formData = new FormData();
-
-      formData.append("inpFile", inpFile.files[0]);
-
-      fetch(endpoint, {
-        method: "post",
-        body: formData
-      }).catch(console.error);
-      
-    });
-
-    myForm.addEventListener("submit", e => {
-      e.preventDefault();
-
-      const endpoint = "upload-1.php";
-      const formData = new FormData();
-
-      formData.append("inpFile1", inpFile1.files[0]);
-
-      fetch(endpoint, {
-        method: "post",
-        body: formData
-      }).catch(console.error);
-      
-    });
-
-    myForm.addEventListener("submit", e => {
-      e.preventDefault();
-
-      const endpoint = "upload-2.php";
-      const formData = new FormData();
-
-      formData.append("inpFile2", inpFile2.files[0]);
-
-      fetch(endpoint, {
-        method: "post",
-        body: formData
-      }).catch(console.error);
-      
-    });
-
-    myForm.addEventListener("submit", e => {
-      e.preventDefault();
-
-      const endpoint = "upload-3.php";
-      const formData = new FormData();
-
-      formData.append("inpFile3", inpFile3.files[0]);
-
-      fetch(endpoint, {
-        method: "post",
-        body: formData
-      }).catch(console.error);
-      
-    });
-
-    myForm.addEventListener("submit", e => {
-      e.preventDefault();
-
-      const endpoint = "upload-4.php";
-      const formData = new FormData();
-
-      formData.append("inpFile4", inpFile4.files[0]);
-
-      fetch(endpoint, {
-        method: "post",
-        body: formData
-      }).catch(console.error);
-      
-    });
-    
-  </script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="javascript/questionnaire.js"></script>
   <script src="javascript/hamburger.js"></script>
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init("3nb4CAE9kyJLPiCLd");
+    })();
+  </script>
     
 </body>
 </html>

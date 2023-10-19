@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Victor Estrella - Health Questionnaire</title>
+  <link rel="icon" href="img/icon.png">
+  <link rel="stylesheet" href="css/questionnaire.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/hamburger-menu.css">
+</head>
+<body id="body">
+  
+  <header>
+
+    <div id="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-mobile-container" class="nav-mobile-container">
+      <div id="nav-menu-mobile" class="nav-menu-mobile">
+        <a id="nav-mobile-home" class="nav-item-mobile" href="#nav">Home</a>
+        <hr>
+        <a id="nav-mobile-about" class="nav-item-mobile" href="#about">About</a>
+        <hr>
+        <div id="contact-btn-1" class="nav-item-mobile">Contact</div>
+      </div>
+    </nav>
+  
+    <nav class="nav-bar">
+      <div class="logo">
+        <img class="logo-img" src="/img/logo.png" alt="logo">
+        <h1>Dr. Victor Estrella</h1>
+      </div>
+      <div class="flex nav-menu">
+        <div class="nav-items">
+          <a class="nav-item" href="index.html">Home</a>
+          <a class="nav-item" href="#">About</a>
+          <a class="nav-item" href="#">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="form-container">
+
+    <span id="loaderContainer" class="loader-container" style="display: none;">
+      <div class="loader"></div>
+      <p class="please-wait">Please wait...</p>
+    </span>
+
+    <form name="form" id="myForm" style="display: flex;" onsubmit="sendEmail();  return false;">
+
+      <h1 class="form-h1">Health Questionnaire</h1>
+
+      <p class="padding-top font-size">If you are interested in having <b>Plastic Surgery</b> please have ready photos of your <b> <br>(Front, Back, Right side and Left side)</b>.</p>
+      <p class="padding-top font-size margin-bottom">Si está interesado/a en someterse a una <b>Cirugía Plástica</b>, tenga fotos listas de su cuerpo de su<b> <br>(Frente, Espalda, Lado derecho y Lado izquierdo)</b>.</p>
+
+      <p class="text bold padding-top">First and Last name*</p>
+      <p class="text"> Nombre y Apellido*</p>
+      <input type="text" id="name" required>
+
+      <p class="text bold">Email Address*</p>
+      <p class="text"> Correo electronico*</p>
+      <input type="text" id="email" required>
+
+      <p class="text bold">Phone Number*</p>
+      <p class="text">Numero Telefonico*</p>
+      <input type="tel" id="phone-number" required>
+
+      <p class="text bold">Date of Birth*</p>
+      <p class="text">Fecha de nacimiento*</p>
+      <input type="date" id="date-of-birth" required>
+
+      <p class="text bold">Intagram Username*</p>
+      <p class="text">Usuario de Instagram*</p>
+      <input type="text" id="instagram-username" placeholder="@example123" required>
+
+      <button type="submit">Submit</button>
+
+    </form>
+  </div>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="javascript/questionnaire.js"></script>
+  <script src="javascript/hamburger.js"></script>
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init("3nb4CAE9kyJLPiCLd");
+    })();
+  </script>
+    
+</body>
+</html>
