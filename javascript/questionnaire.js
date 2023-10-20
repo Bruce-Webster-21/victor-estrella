@@ -7,6 +7,8 @@ function sendEmail() {
     instagramUsername: document.getElementById("instagram-username").value,
     height: document.getElementById("height").value,
     weight: document.getElementById("weight").value,
+    sex: maleOrFemale(),
+    dateOfSurgery: document.getElementById("date-of-surgery").value
   }
 
   const serviceID = "service_bky2b85"
@@ -23,8 +25,21 @@ function sendEmail() {
       document.getElementById("instagram-username").value = ""
       document.getElementById("height").value = ""
       document.getElementById("weight").value = ""
+      document.querySelectorAll(".radio-input").forEach((input) => {
+        input.checked = false
+      })
+      document.getElementById("date-of-surgery").value = ""
       console.log(res)
       alert("Message Sent")
     })
     .catch(error => console.log(error))
+}
+
+function maleOrFemale() {
+  male = document.getElementById("male")
+  if(male.checked) {
+    return 'Macho'
+  } else {
+    return 'Hembra'
+  }
 }
