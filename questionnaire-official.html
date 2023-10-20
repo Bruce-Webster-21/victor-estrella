@@ -99,6 +99,74 @@
       <p class="text">Fecha deseada para Cirugia*</p>
       <input type="date" id="date-of-surgery" required>
 
+      <p class="text bold">I want...*</p>
+      <p class="text">Quiero...*</p>
+      <div class="medical-conditions">
+        <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Plastic Surgery" onclick="show()"  > Plastic Surgery (Cirugía Plástica)</div>
+        <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Dental Work" onclick="showDental()"  > Dental Work (Trabajo Dental)</div>
+        <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Bariactric" > Bariactric (Bariátrica)</div>
+        <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Vaginoplasty" > Vaginoplasty (Vaginoplastia)</div>
+        <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Microblading" > Microblading</div>
+        <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Other" onclick="otherService()" > Other(Otro)</div>
+      </div>
+      <span id="img-upload-section" class="img-upload-section" style="display: none;">
+
+        <p class="text bold">I want...*</p>
+        <p class="text">Quiero...*</p>
+
+        <div class="padding-top">
+          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Liposuction" > Liposuction (Liposucción)</div>
+          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="BBL" > Brazilian Butt Lift (Levantamiento de glúteos)</div>
+          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Tummy Tuck" > Tummy Tuck (Abdominoplastia)</div>
+          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Breast Augmentation" > Breast Augmentation (Aumento de senos)</div>
+          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Breast Implant Revision" > Breast Implant Revision (Revisión de implantes mamarios)</div>
+          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Breast Lift" > Breast Lift (Levantamiento de Senos)</div>
+          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Breast Reduction" > Breast Reduction (Reducción de Senos)</div>
+          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Arm Lift " > Arm Lift (Levantamiento de brazos)</div>
+          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Thigh Lift" > Thigh Lift (Levantamiento de muslos)</div>
+          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Rhinoplasty" > Rhinoplasty (Rinoplastia)</div>
+        </div>
+        
+        <p class="text bold padding-top">Please provide the following images...*</p>
+        <p class="text">Por favor otorgar las siguientes imágenes.*</p>
+
+        <p class="text bold padding-top">(Front Side)*</p>
+        <p class="text">(Lado Delantero)*</p>
+        <input class="img-input" type="file" id="inpFile">
+  
+        <p class="text bold padding-top">(Back Side)*</p>
+        <p class="text">(Lado Trasero)</p>
+        <input class="img-input" type="file" id="inpFile1">
+  
+        <p class="text bold padding-top">(Right Side)*</p>
+        <p class="text">(Lado Derecho)*</p>
+        <input class="img-input" type="file" id="inpFile2">
+  
+        <p class="text bold padding-top">(Left Side)*</p>
+        <p class="text">(Cuerpo Izquierdo)*</p>
+        <input class="img-input" type="file" id="inpFile3">
+
+      </span>
+
+      <span id="dental-img-upload-section" class="img-upload-section" style="display: none;">
+        
+        <p class="text bold">Please provide the following images...*</p>
+        <p class="text">Por favor otorgar las siguientes imágenes.*</p>
+
+        <p class="text bold padding-top">(Teeth)*</p>
+        <p class="text">(Dientes)*</p>
+        <input class="img-input" type="file" id="inpFile4">
+        
+      </span>
+
+      <span class="img-upload-section" id="other-service" style="display: none;">
+
+        <p class="text bold">Please specify which other service you would like...*</p>
+        <p class="text">Porfavor especifique cual otro servicio desea...*</p>
+        <input type="text" class="other-service" id="other-service-input">
+
+      </span>
+
       <button type="submit">Submit</button>
 
     </form>
