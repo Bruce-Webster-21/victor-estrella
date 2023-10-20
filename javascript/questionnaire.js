@@ -5,6 +5,8 @@ function sendEmail() {
     phoneNumber: document.getElementById("phone-number").value,
     dateOfBirth: document.getElementById("date-of-birth").value,
     instagramUsername: document.getElementById("instagram-username").value,
+    height: document.getElementById("height").value,
+    weight: document.getElementById("weight").value,
   }
 
   const serviceID = "service_bky2b85"
@@ -19,8 +21,10 @@ function sendEmail() {
       document.getElementById("phone-number").value = ""
       document.getElementById("date-of-birth").value = ""
       document.getElementById("instagram-username").value = ""
+      document.getElementById("height").value = ""
+      document.getElementById("weight").value = ""
       console.log(res)
-      alert("message working")
+      alert("Message Sent")
     })
     .catch(error => console.log(error))
 }
