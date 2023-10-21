@@ -102,29 +102,28 @@
       <p class="text bold">I want...*</p>
       <p class="text">Quiero...*</p>
       <div class="medical-conditions">
-        <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Plastic Surgery" onclick="show()"  > Plastic Surgery (Cirugía Plástica)</div>
-        <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Dental Work" onclick="showDental()"  > Dental Work (Trabajo Dental)</div>
-        <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Bariactric" > Bariactric (Bariátrica)</div>
-        <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Vaginoplasty" > Vaginoplasty (Vaginoplastia)</div>
+        <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Cirugía Plástica" onclick="show()"  > Plastic Surgery (Cirugía Plástica)</div>
+        <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Trabajo Dental" onclick="showDental()"  > Dental Work (Trabajo Dental)</div>
+        <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Bariátrica" > Bariactric (Bariátrica)</div>
+        <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Vaginoplastia" > Vaginoplasty (Vaginoplastia)</div>
         <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Microblading" > Microblading</div>
-        <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Other" onclick="otherService()" > Other(Otro)</div>
+        <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Otro" onclick="otherService()" > Other(Otro)</div>
       </div>
       <span id="img-upload-section" class="img-upload-section" style="display: none;">
-
         <p class="text bold">I want...*</p>
         <p class="text">Quiero...*</p>
 
         <div class="padding-top">
-          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Liposuction" > Liposuction (Liposucción)</div>
-          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="BBL" > Brazilian Butt Lift (Levantamiento de glúteos)</div>
-          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Tummy Tuck" > Tummy Tuck (Abdominoplastia)</div>
-          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Breast Augmentation" > Breast Augmentation (Aumento de senos)</div>
-          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Breast Implant Revision" > Breast Implant Revision (Revisión de implantes mamarios)</div>
-          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Breast Lift" > Breast Lift (Levantamiento de Senos)</div>
-          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Breast Reduction" > Breast Reduction (Reducción de Senos)</div>
-          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Arm Lift " > Arm Lift (Levantamiento de brazos)</div>
-          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Thigh Lift" > Thigh Lift (Levantamiento de muslos)</div>
-          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Rhinoplasty" > Rhinoplasty (Rinoplastia)</div>
+          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Liposuccion" > Liposuction (Liposucción)</div>
+          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Levantamiento de glúteos" > Brazilian Butt Lift (Levantamiento de glúteos)</div>
+          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Abdominoplastia" > Tummy Tuck (Abdominoplastia)</div>
+          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Aumento de senos" > Breast Augmentation (Aumento de senos)</div>
+          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Revisión de implantes mamarios" > Breast Implant Revision (Revisión de implantes mamarios)</div>
+          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Levantamiento de Senos" > Breast Lift (Levantamiento de Senos)</div>
+          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Reducción de Senos" > Breast Reduction (Reducción de Senos)</div>
+          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Levantamiento de brazos" > Arm Lift (Levantamiento de brazos)</div>
+          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Levantamiento de muslos" > Thigh Lift (Levantamiento de muslos)</div>
+          <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="plasticSurgeryOptions" value="Rinoplastia" > Rhinoplasty (Rinoplastia)</div>
         </div>
         
         <p class="text bold padding-top">Please provide the following images...*</p>
@@ -145,27 +144,57 @@
         <p class="text bold padding-top">(Left Side)*</p>
         <p class="text">(Cuerpo Izquierdo)*</p>
         <input class="img-input" type="file" id="inpFile3">
-
       </span>
 
       <span id="dental-img-upload-section" class="img-upload-section" style="display: none;">
-        
         <p class="text bold">Please provide the following images...*</p>
         <p class="text">Por favor otorgar las siguientes imágenes.*</p>
-
         <p class="text bold padding-top">(Teeth)*</p>
         <p class="text">(Dientes)*</p>
-        <input class="img-input" type="file" id="inpFile4">
-        
+        <input class="img-input" type="file" id="inpFile4"> 
       </span>
 
       <span class="img-upload-section" id="other-service" style="display: none;">
-
         <p class="text bold">Please specify which other service you would like...*</p>
         <p class="text">Porfavor especifique cual otro servicio desea...*</p>
         <input type="text" class="other-service" id="other-service-input">
-
       </span>
+
+      <p class="text bold padding-top">Do you have any of the following?*</p>
+      <p class="text">¿Tiene alguno de los siguientes?*</p>
+      <div class="medical-conditions">
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Diabetes"> Diabetes (Diabetes)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="High Blood Pressure"> High Blood Pressure (Hipertensión)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="High Cholesterol"> High Cholesterol (Colesterol alto)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Thalassemia"> Thalassemia (Talasemia)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Heart Attack"> Heart Attack (Infarto de miocardio)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Heart Failure"> Heart Failure (Insuficiencia cardiaca)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Chest Pain"> Chest Pain (Dolor en el pecho)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Angina"> Angina (Angina)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Cancer"> Cancer (Cáncer)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Lupus"> Lupus</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Asthma"> Asthma (Asma)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Sleep Apnea "> Sleep Apnea (Apnea del sueño)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Arthritis"> Arthritis (Artritis)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Joint Pain/Back Pain"> Joint Pain/Back Pain (Dolor en las articulaciones / dolor de espalda)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Gerd/Heartburn"> Gerd/Heartburn (Gerd / Acidez estomacal)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Ulcers"> Ulcers (Úlceras)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Liver Disease"> Liver Disease (Enfermedad del higado)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Frequent Diarrheas"> Frequent Diarrheas (Diarrea frecuente)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Crohn's Disease/Colitis"> Crohn's Disease/Colitis (Enfermedad de Crohn / Colitis)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Bladder Incontinence"> Bladder Incontinence (Incontinencia de vejiga)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="HIV"> HIV (VIH)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Hepatitis"> Hepatitis B or C</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Sicklemia"> Sicklemia (Anemia)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Sickle Cell Trait"> Sickle Cell Trait (El rasgo de células falciformes)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Thyroid"> Thyroid (Tiroides)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Multiple Sclerosis"> Multiple Sclerosis (Esclerosis múltiple)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Leukemia"> Leukemia (Leucemia)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Syphilis"> Syphilis (Sífilis)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Myasthenia Gravis"> Myasthenia Gravis (Miastenia gravis)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="Coronavirus"> Coronavirus (Coronavirus)</div>
+        <div class="checkbox-container"><input class="checkbox-input" type="checkbox" name="medicalconditions" value="None">  None (Ninguno)</div>
+      </div>
 
       <button type="submit">Submit</button>
 

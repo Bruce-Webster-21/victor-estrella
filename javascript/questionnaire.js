@@ -11,6 +11,8 @@ function sendEmail() {
     dateOfSurgery: document.getElementById("date-of-surgery").value,
     patientWants: patientWants(),
     typeSurgery: plasticSurgery(),
+    other: otherServiceWanted(),
+    medicalConditions: medicalConditions(),
   }
 
   const serviceID = "service_bky2b85"
@@ -96,4 +98,23 @@ function otherService() {
   } else if (input.style.display == "block") {
     input.style.display = "none"
   }
+}
+
+function otherServiceWanted() {
+  if (document.getElementById("other-service-input").value == "") {
+    return "N/A"
+  } else {
+    return document.getElementById("other-service-input").value
+  } 
+}
+
+function medicalConditions() {
+  let arr = [];
+  let checkboxes = document.getElementsByName("medicalconditions")
+  checkboxes.forEach(checkbox => {
+    if (checkbox.checked) {
+      arr.push(" " + checkbox.value)
+    }
+  })
+  return arr;
 }
