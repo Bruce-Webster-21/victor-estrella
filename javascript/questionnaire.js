@@ -11,8 +11,9 @@ function sendEmail() {
     dateOfSurgery: document.getElementById("date-of-surgery").value,
     patientWants: patientWants(),
     typeSurgery: plasticSurgery(),
-    other: otherServiceWanted(),
+    otherServiceWanted: document.getElementById("other-service-input").value == "" ? "N/A" : document.getElementById("other-service-input").value,
     medicalConditions: medicalConditions(),
+    otherMedicalCondition: document.getElementById("disabled-input").value == "" ? "N/A" : document.getElementById("disabled-input").value
   }
 
   const serviceID = "service_bky2b85"
@@ -100,14 +101,6 @@ function otherService() {
   }
 }
 
-function otherServiceWanted() {
-  if (document.getElementById("other-service-input").value == "") {
-    return "N/A"
-  } else {
-    return document.getElementById("other-service-input").value
-  } 
-}
-
 function medicalConditions() {
   let arr = [];
   let checkboxes = document.getElementsByName("medicalconditions")
@@ -117,4 +110,20 @@ function medicalConditions() {
     }
   })
   return arr;
+}
+
+function ableInput() {
+  input = document.getElementById("disabled-input")
+
+  if (input.style.display == "none") {
+    input.style.display = "block"
+  }
+}
+
+function disableInput() {
+  input = document.getElementById("disabled-input")
+
+  if (input.style.display == "block") {
+    input.style.display = "none"
+  }
 }
