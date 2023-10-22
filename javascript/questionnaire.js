@@ -18,6 +18,8 @@ function sendEmail() {
     amountCigarette: document.getElementById("cigarettes-1").value == "" ? "N/A" : document.getElementById("cigarettes-1").value,
     amountMarijuana: document.getElementById("marijuana-1").value == "" ? "N/A" : document.getElementById("marijuana-1").value,
     otherDrugSmoked: document.getElementById("other-drug").value == "" ? "N/A" : document.getElementById("other-drug").value,
+    takingMedicine: document.getElementById("medicine-input").value == "" ? "N/A" : "Si, " + document.getElementById("medicine-input").value,
+    medicalTreatment: document.getElementById("medicine-input").value == "" ? "N/A" : "Si, " + document.getElementById("medicine-input").value,
   }
 
   const serviceID = "service_bky2b85"
@@ -135,9 +137,13 @@ function disableInput() {
 function patientSmokes() {
   let arr = []
   document.getElementsByName("patientSmokes").forEach(patientSmoke => {
-    patientSmoke.checked ? arr.push(" " + patientSmoke.value) : arr.push("")
+    if (patientSmoke.checked) {
+      arr.push(" " + patientSmoke.value)
+    }
   }) 
-  return arr
+  if (arr.length == 0) {
+    return "N/A"
+  }
 }
 
 function smokeAbleInput() {
@@ -182,6 +188,38 @@ function otherPerDayAble() {
   if (input.style.display == "none") {
     input.style.display = "block"
   } else if (input.style.display == "block") {
+    input.style.display = "none"
+  }
+}
+
+function medicineAbleInput() {
+  input = document.getElementById("medicine-input")
+
+  if (input.style.display == "none") {
+    input.style.display = "block"
+  }
+}
+
+function medicineDisableInput() {
+  input = document.getElementById("medicine-input")
+
+  if (input.style.display == "block") {
+    input.style.display = "none"
+  }
+}
+
+function medicationAbleInput() {
+  input = document.getElementById("medication-input")
+
+  if (input.style.display == "none") {
+    input.style.display = "block"
+  }
+}
+
+function medicationDisableInput() {
+  input = document.getElementById("medication-input")
+
+  if (input.style.display == "block") {
     input.style.display = "none"
   }
 }

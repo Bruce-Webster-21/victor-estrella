@@ -240,6 +240,22 @@
         </div>
       </span>
 
+      <p class="text bold padding-top">Are you currently on any medication?*</p>
+      <p class="text">¿Está tomando algún medicamento actualmente?</p>
+      <div class="medical-conditions">
+        <div class="checkbox-container"><input onclick="medicineAbleInput()" class="checkbox-input" name="medication" type="radio" id="medication-yes" required> Yes (Si)</div>
+        <div class="checkbox-container"><input onclick="medicineDisableInput()" class="checkbox-input" name="medication" type="radio" id="medication-no" required> No (No)</div>
+        <input id="medicine-input" type="text" placeholder="I am currently taking... ( Actualmente estoy tomando... )" style="display: none;">
+      </div>
+
+      <p class="text bold padding-top">Have you been under any medical treatment we should know about?*</p>
+      <p class="text">¿Ha recibido algún tratamiento médico que debamos conocer?</p>
+      <div class="medical-conditions">
+        <div class="checkbox-container"><input onclick="medicationAbleInput()" class="checkbox-input" name="treatment" type="radio" id="treatment-yes" required> Yes (Si)</div>
+        <div class="checkbox-container"><input onclick="medicationDisableInput()" class="checkbox-input" name="treatment" type="radio" id="treatment-no" required> No (No)</div>
+        <input id="medication-input" type="text" placeholder="I have been under...( He recibido... )" style="display: none;">
+      </div>
+
       <button type="submit">Submit</button>
 
     </form>
