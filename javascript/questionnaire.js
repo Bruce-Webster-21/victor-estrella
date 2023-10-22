@@ -13,7 +13,11 @@ function sendEmail() {
     typeSurgery: plasticSurgery(),
     otherServiceWanted: document.getElementById("other-service-input").value == "" ? "N/A" : document.getElementById("other-service-input").value,
     medicalConditions: medicalConditions(),
-    otherMedicalCondition: document.getElementById("disabled-input").value == "" ? "N/A" : document.getElementById("disabled-input").value
+    otherMedicalCondition: document.getElementById("disabled-input").value == "" ? "N/A" : document.getElementById("disabled-input").value,
+    patientSmokes: patientSmokes(),
+    amountCigarette: document.getElementById("cigarettes-1").value == "" ? "N/A" : document.getElementById("cigarettes-1").value,
+    amountMarijuana: document.getElementById("marijuana-1").value == "" ? "N/A" : document.getElementById("marijuana-1").value,
+    otherDrugSmoked: document.getElementById("other-drug").value == "" ? "N/A" : document.getElementById("other-drug").value,
   }
 
   const serviceID = "service_bky2b85"
@@ -124,6 +128,60 @@ function disableInput() {
   input = document.getElementById("disabled-input")
 
   if (input.style.display == "block") {
+    input.style.display = "none"
+  }
+}
+
+function patientSmokes() {
+  let arr = []
+  document.getElementsByName("patientSmokes").forEach(patientSmoke => {
+    patientSmoke.checked ? arr.push(" " + patientSmoke.value) : arr.push("")
+  }) 
+  return arr
+}
+
+function smokeAbleInput() {
+  input = document.getElementById("smoke")
+
+  if (input.style.display == "none") {
+    input.style.display = "block"
+  }
+}
+
+function smokeDisableInput() {
+  input = document.getElementById("smoke")
+
+  if (input.style.display == "block") {
+    input.style.display = "none"
+  }
+}
+
+function marijuanaPerDayAble() {
+  input = document.getElementById("marijuanaPerDay")
+
+  if (input.style.display == "none") {
+    input.style.display = "block"
+  } else if (input.style.display == "block") {
+    input.style.display = "none"
+  }
+}
+
+function cigarettesPerDayAble() {
+  input = document.getElementById("cigarettesPerDay")
+
+  if (input.style.display == "none") {
+    input.style.display = "block"
+  } else if (input.style.display == "block") {
+    input.style.display = "none"
+  }
+}
+
+function otherPerDayAble() {
+  input = document.getElementById("otherPerDay")
+
+  if (input.style.display == "none") {
+    input.style.display = "block"
+  } else if (input.style.display == "block") {
     input.style.display = "none"
   }
 }

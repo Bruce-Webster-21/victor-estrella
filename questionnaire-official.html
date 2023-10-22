@@ -204,6 +204,42 @@
         <input id="disabled-input" type="text" placeholder="other... ( otro... )" style="display: none;">
       </div>
 
+      <p class="text bold padding-top">Do you smoke?*</p>
+      <p class="text">¿Usted fuma?</p>
+      <div class="medical-conditions">
+        <div class="checkbox-container"><input onclick="smokeAbleInput()" class="checkbox-input" name="smoke" type="radio" id="smoke-yes"> Yes (Si) </div>
+        <div class="checkbox-container"><input onclick="smokeDisableInput()" class="checkbox-input" name="smoke" type="radio" id="smoke-no"> No (No) </div>
+      </div>
+
+      <span id="smoke" class="img-upload-section" style="display: none;">
+        <p class="text bold">Please specify*</p>
+        <p class="text">Porfavor especifique*</p>
+        <div class="medical-conditions">
+          <div class="checkbox-container"><input onclick="cigarettesPerDayAble()"name="patientSmokes" class="checkbox-input" type="checkbox" id="cigarettes" value="Cigarillos"> Cigarettes (Cigarillos)</div>
+          <div class="checkbox-container"><input onclick="marijuanaPerDayAble()"name="patientSmokes" class="checkbox-input" type="checkbox" id="marijuana" value="Marijuana"> Marijuana</div>
+          <div class="checkbox-container"><input class="checkbox-input"name="patientSmokes" type="checkbox" id="vape" value="Cigarillo Electronico"> Vape</div>
+          <div class="checkbox-container"><input onclick="otherPerDayAble()"name="patientSmokes" class="checkbox-input" type="checkbox" id="other" value="Otro"> Other (Otro)</div>
+        </div>
+
+        <div id="cigarettesPerDay" style="display: none;">
+          <p class="text bold padding-top">How many cigarettes per day?*</p>
+          <p class="text">¿Cuantos cigarillos al dia?*</p>
+          <input id="cigarettes-1" type="text">
+        </div>
+
+        <div id="marijuanaPerDay" style="display: none;">
+          <p class="text bold padding-top">How much marijuana per day?*</p>
+          <p class="text">¿Cuanta marijuana al dia?*</p>
+          <input id="marijuana-1" type="text">
+        </div>
+
+        <div id="otherPerDay" style="display: none;">
+          <p class="text bold padding-top">Please specify what other drug you smoke*</p>
+          <p class="text">Porfavor especificar cual otra droga fuma*</p>
+          <input id="other-drug" type="text">
+        </div>
+      </span>
+
       <button type="submit">Submit</button>
 
     </form>
