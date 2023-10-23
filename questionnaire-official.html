@@ -102,12 +102,11 @@
       <p class="text bold">I want...*</p>
       <p class="text">Quiero...*</p>
       <div class="medical-conditions">
-        <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Cirugía Plástica" onclick="show()"  > Plastic Surgery (Cirugía Plástica)</div>
-        <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Trabajo Dental" onclick="showDental()"  > Dental Work (Trabajo Dental)</div>
+        <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Cirugía Plástica" onclick="show(`img-upload-section`)"  > Plastic Surgery (Cirugía Plástica)</div>
         <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Bariátrica" > Bariactric (Bariátrica)</div>
         <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Vaginoplastia" > Vaginoplasty (Vaginoplastia)</div>
         <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Microblading" > Microblading</div>
-        <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Otro" onclick="otherService()" > Other(Otro)</div>
+        <div class="checkbox-container"><input name="patientWants" class="checkbox-input" type="checkbox" value="Otro" onclick="show(`other-service`)"> Other(Otro)</div>
       </div>
       <span id="img-upload-section" class="img-upload-section" style="display: none;">
         <p class="text bold">I want...*</p>
@@ -144,14 +143,6 @@
         <p class="text bold padding-top">(Left Side)*</p>
         <p class="text">(Cuerpo Izquierdo)*</p>
         <input class="img-input" type="file" id="inpFile3">
-      </span>
-
-      <span id="dental-img-upload-section" class="img-upload-section" style="display: none;">
-        <p class="text bold">Please provide the following images...*</p>
-        <p class="text">Por favor otorgar las siguientes imágenes.*</p>
-        <p class="text bold padding-top">(Teeth)*</p>
-        <p class="text">(Dientes)*</p>
-        <input class="img-input" type="file" id="inpFile4"> 
       </span>
 
       <span class="img-upload-section" id="other-service" style="display: none;">
@@ -199,26 +190,26 @@
       <p class="text bold padding-top">Do you have any other condition not mentioned, that we should know about?*</p>
       <p class="text">¿Tiene alguna otra condición no mencionada, que debamos conocer?</p>
       <div class="medical-conditions">
-        <div class="checkbox-container"><input onclick="ableInput()" class="checkbox-input" name="condition" type="radio" id="condition-yes" required> Yes (Si)</div>
-        <div class="checkbox-container"><input onclick="disableInput()" class="checkbox-input" name="condition" type="radio" id="condition-no" required> No (No)</div>
+        <div class="checkbox-container"><input onclick="activate(`disabled-input`)" class="checkbox-input" name="condition" type="radio" id="condition-yes" required> Yes (Si)</div>
+        <div class="checkbox-container"><input onclick="disable(`disabled-input`)" class="checkbox-input" name="condition" type="radio" id="condition-no" required> No (No)</div>
         <input id="disabled-input" type="text" placeholder="other... ( otro... )" style="display: none;">
       </div>
 
       <p class="text bold padding-top">Do you smoke?*</p>
       <p class="text">¿Usted fuma?</p>
       <div class="medical-conditions">
-        <div class="checkbox-container"><input onclick="smokeAbleInput()" class="checkbox-input" name="smoke" type="radio" id="smoke-yes"> Yes (Si) </div>
-        <div class="checkbox-container"><input onclick="smokeDisableInput()" class="checkbox-input" name="smoke" type="radio" id="smoke-no"> No (No) </div>
+        <div class="checkbox-container"><input onclick="activate(`smoke`)" class="checkbox-input" name="smoke" type="radio" id="smoke-yes"> Yes (Si) </div>
+        <div class="checkbox-container"><input onclick="disable(`smoke`)" class="checkbox-input" name="smoke" type="radio" id="smoke-no"> No (No) </div>
       </div>
 
       <span id="smoke" class="img-upload-section" style="display: none;">
         <p class="text bold">Please specify*</p>
         <p class="text">Porfavor especifique*</p>
         <div class="medical-conditions">
-          <div class="checkbox-container"><input onclick="cigarettesPerDayAble()"name="patientSmokes" class="checkbox-input" type="checkbox" id="cigarettes" value="Cigarillos"> Cigarettes (Cigarillos)</div>
-          <div class="checkbox-container"><input onclick="marijuanaPerDayAble()"name="patientSmokes" class="checkbox-input" type="checkbox" id="marijuana" value="Marijuana"> Marijuana</div>
+          <div class="checkbox-container"><input onclick="show(`cigarettesPerDay`)"name="patientSmokes" class="checkbox-input" type="checkbox" id="cigarettes" value="Cigarillos"> Cigarettes (Cigarillos)</div>
+          <div class="checkbox-container"><input onclick="show(`marijuanaPerDay`)"name="patientSmokes" class="checkbox-input" type="checkbox" id="marijuana" value="Marijuana"> Marijuana</div>
           <div class="checkbox-container"><input class="checkbox-input"name="patientSmokes" type="checkbox" id="vape" value="Cigarillo Electronico"> Vape</div>
-          <div class="checkbox-container"><input onclick="otherPerDayAble()"name="patientSmokes" class="checkbox-input" type="checkbox" id="other" value="Otro"> Other (Otro)</div>
+          <div class="checkbox-container"><input onclick="show(`otherPerDay`)"name="patientSmokes" class="checkbox-input" type="checkbox" id="other" value="Otro"> Other (Otro)</div>
         </div>
 
         <div id="cigarettesPerDay" style="display: none;">
@@ -243,17 +234,45 @@
       <p class="text bold padding-top">Are you currently on any medication?*</p>
       <p class="text">¿Está tomando algún medicamento actualmente?</p>
       <div class="medical-conditions">
-        <div class="checkbox-container"><input onclick="medicineAbleInput()" class="checkbox-input" name="medication" type="radio" id="medication-yes" required> Yes (Si)</div>
-        <div class="checkbox-container"><input onclick="medicineDisableInput()" class="checkbox-input" name="medication" type="radio" id="medication-no" required> No (No)</div>
+        <div class="checkbox-container"><input onclick="activate(`medicine-input`)" class="checkbox-input" name="medication" type="radio" id="medication-yes" required> Yes (Si)</div>
+        <div class="checkbox-container"><input onclick="disable(`medicine-input`)" class="checkbox-input" name="medication" type="radio" id="medication-no" required> No (No)</div>
         <input id="medicine-input" type="text" placeholder="I am currently taking... ( Actualmente estoy tomando... )" style="display: none;">
       </div>
 
       <p class="text bold padding-top">Have you been under any medical treatment we should know about?*</p>
       <p class="text">¿Ha recibido algún tratamiento médico que debamos conocer?</p>
       <div class="medical-conditions">
-        <div class="checkbox-container"><input onclick="medicationAbleInput()" class="checkbox-input" name="treatment" type="radio" id="treatment-yes" required> Yes (Si)</div>
-        <div class="checkbox-container"><input onclick="medicationDisableInput()" class="checkbox-input" name="treatment" type="radio" id="treatment-no" required> No (No)</div>
+        <div class="checkbox-container"><input onclick="activate(`medication-input`)" class="checkbox-input" name="treatment" type="radio" id="treatment-yes" required> Yes (Si)</div>
+        <div class="checkbox-container"><input onclick="disable(`medication-input`)" class="checkbox-input" name="treatment" type="radio" id="treatment-no" required> No (No)</div>
         <input id="medication-input" type="text" placeholder="I have been under...( He recibido... )" style="display: none;">
+      </div>
+
+      <p class="text bold padding-top">Are you a cancer survivor?*</p>
+      <p class="text">¿Es usted un sobreviviente de cáncer?</p>
+      <div class="medical-conditions">
+        <div class="checkbox-container"><input class="checkbox-input yes" name="cancer" type="radio" id="cancer-yes" required> Yes (Si)</div>
+        <div class="checkbox-container"><input class="checkbox-input" name="cancer" type="radio" id="cancer-no" required> No (No)</div>
+      </div>
+
+      <p class="text bold padding-top">Do you know if you heal with keloid?*</p>
+      <p class="text">¿Sabes si sufres de queloides?</p>
+      <div class="medical-conditions">
+        <div class="checkbox-container"><input class="checkbox-input yes" name="keloid" type="radio" id="keloid-yes" required> Yes (Si)</div>
+        <div class="checkbox-container"><input class="checkbox-input" name="keloid" type="radio" id="keloid-no" required> No (No)</div>
+      </div>
+
+      <p class="text bold padding-top">Do you have silicone shots in you buttocks?*</p>
+      <p class="text">¿Tiene inyecciones de silicona en las nalgas?</p>
+      <div class="medical-conditions">
+        <div class="checkbox-container"><input class="checkbox-input yes" name="silicon" type="radio" id="silicon-yes" required> Yes (Si)</div>
+        <div class="checkbox-container"><input class="checkbox-input" name="silicon" type="radio" id="silicon-no" required> No (No)</div>
+      </div>
+
+      <p class="text bold padding-top">Have you had COVID-19 in the last 6 months?*</p>
+      <p class="text">¿Ha tenido COVID-19 en los últimos 6 meses?</p>
+      <div class="medical-conditions">
+        <div class="checkbox-container"><input class="checkbox-input yes" name="covid" type="radio" id="covid-yes" required> Yes (Si)</div>
+        <div class="checkbox-container"><input class="checkbox-input" name="covid" type="radio" id="covid-no" required> No (No)</div>
       </div>
 
       <button type="submit">Submit</button>

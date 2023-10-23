@@ -9,17 +9,21 @@ function sendEmail() {
     weight: document.getElementById("weight").value,
     sex: maleOrFemale(),
     dateOfSurgery: document.getElementById("date-of-surgery").value,
-    patientWants: patientWants(),
-    typeSurgery: plasticSurgery(),
+    patientWants: checkboxLoop("patientWants"),
+    typeSurgery: checkboxLoop("plasticSurgeryOptions"),
     otherServiceWanted: document.getElementById("other-service-input").value == "" ? "N/A" : document.getElementById("other-service-input").value,
-    medicalConditions: medicalConditions(),
+    medicalConditions: checkboxLoop("medicalconditions"),
     otherMedicalCondition: document.getElementById("disabled-input").value == "" ? "N/A" : document.getElementById("disabled-input").value,
-    patientSmokes: patientSmokes(),
+    patientSmokes: checkboxLoop("patientSmokes"),
     amountCigarette: document.getElementById("cigarettes-1").value == "" ? "N/A" : document.getElementById("cigarettes-1").value,
     amountMarijuana: document.getElementById("marijuana-1").value == "" ? "N/A" : document.getElementById("marijuana-1").value,
     otherDrugSmoked: document.getElementById("other-drug").value == "" ? "N/A" : document.getElementById("other-drug").value,
     takingMedicine: document.getElementById("medicine-input").value == "" ? "N/A" : "Si, " + document.getElementById("medicine-input").value,
-    medicalTreatment: document.getElementById("medicine-input").value == "" ? "N/A" : "Si, " + document.getElementById("medicine-input").value,
+    medicalTreatment: document.getElementById("medication-input").value == "" ? "N/A" : "Si, " + document.getElementById("medication-input").value,
+    cancer: document.getElementById("cancer-yes").checked ? "Si" : "No",
+    keloid: document.getElementById("keloid-yes").checked ? "Si" : "No",
+    silicon: document.getElementById("silicon-yes").checked ? "Si" : "No",
+    covid: document.getElementById("covid-yes").checked ? "Si" : "No",
   }
 
   const serviceID = "service_bky2b85"
@@ -57,169 +61,42 @@ function maleOrFemale() {
   }
 }
 
-function patientWants() {
+function show(id) {
+  input = document.getElementById(id)
+
+  if (input.style.display == "none") {
+    input.style.display = "block"
+  } else if (input.style.display == "block") {
+    input.style.display = "none"
+  } 
+}
+
+function activate(id) {
+  input = document.getElementById(id)
+
+  if (input.style.display == "none") {
+    input.style.display = "block"
+  }
+}
+
+function disable(id) {
+  input = document.getElementById(id)
+
+  if (input.style.display == "block") {
+    input.style.display = "none"
+  }
+}
+
+function checkboxLoop(elements) {
   let arr = [];
-  let checkboxes = document.getElementsByName("patientWants")
+  let checkboxes = document.getElementsByName(elements)
   for (let i = 0; i < checkboxes.length; i++) {
     if(checkboxes[i].checked) {
       arr.push(" " + checkboxes[i].value);
     }
-  } return arr;
-}
-
-function plasticSurgery() {
-  let arr = [];
-  let checkboxes = document.getElementsByName("plasticSurgeryOptions")
-  for (let i = 0; i < checkboxes.length; i++) {
-    if(checkboxes[i].checked) {
-      arr.push(" "  + checkboxes[i].value);
-    }
-  } return arr;
-}
-
-function show() {
-  imgUploadSection = document.getElementById("img-upload-section")
-
-  if (imgUploadSection.style.display == "none") {
-    imgUploadSection.style.display = "block"
-  } else if (imgUploadSection.style.display == "block") {
-    imgUploadSection.style.display = "none"
   } 
-}
-
-function showDental() {
-  dentalImgUploadSection = document.getElementById("dental-img-upload-section")
-
-  if (dentalImgUploadSection.style.display == "none") {
-    dentalImgUploadSection.style.display = "block"
-  } else if (dentalImgUploadSection.style.display == "block") {
-    dentalImgUploadSection.style.display = "none"
-  } 
-}
-
-function otherService() {
-  input = document.getElementById("other-service")
-
-  if (input.style.display == "none") {
-    input.style.display = "block"
-  } else if (input.style.display == "block") {
-    input.style.display = "none"
-  }
-}
-
-function medicalConditions() {
-  let arr = [];
-  let checkboxes = document.getElementsByName("medicalconditions")
-  checkboxes.forEach(checkbox => {
-    if (checkbox.checked) {
-      arr.push(" " + checkbox.value)
-    }
-  })
-  return arr;
-}
-
-function ableInput() {
-  input = document.getElementById("disabled-input")
-
-  if (input.style.display == "none") {
-    input.style.display = "block"
-  }
-}
-
-function disableInput() {
-  input = document.getElementById("disabled-input")
-
-  if (input.style.display == "block") {
-    input.style.display = "none"
-  }
-}
-
-function patientSmokes() {
-  let arr = []
-  document.getElementsByName("patientSmokes").forEach(patientSmoke => {
-    if (patientSmoke.checked) {
-      arr.push(" " + patientSmoke.value)
-    }
-  }) 
   if (arr.length == 0) {
     return "N/A"
-  }
+  } else return arr;
 }
 
-function smokeAbleInput() {
-  input = document.getElementById("smoke")
-
-  if (input.style.display == "none") {
-    input.style.display = "block"
-  }
-}
-
-function smokeDisableInput() {
-  input = document.getElementById("smoke")
-
-  if (input.style.display == "block") {
-    input.style.display = "none"
-  }
-}
-
-function marijuanaPerDayAble() {
-  input = document.getElementById("marijuanaPerDay")
-
-  if (input.style.display == "none") {
-    input.style.display = "block"
-  } else if (input.style.display == "block") {
-    input.style.display = "none"
-  }
-}
-
-function cigarettesPerDayAble() {
-  input = document.getElementById("cigarettesPerDay")
-
-  if (input.style.display == "none") {
-    input.style.display = "block"
-  } else if (input.style.display == "block") {
-    input.style.display = "none"
-  }
-}
-
-function otherPerDayAble() {
-  input = document.getElementById("otherPerDay")
-
-  if (input.style.display == "none") {
-    input.style.display = "block"
-  } else if (input.style.display == "block") {
-    input.style.display = "none"
-  }
-}
-
-function medicineAbleInput() {
-  input = document.getElementById("medicine-input")
-
-  if (input.style.display == "none") {
-    input.style.display = "block"
-  }
-}
-
-function medicineDisableInput() {
-  input = document.getElementById("medicine-input")
-
-  if (input.style.display == "block") {
-    input.style.display = "none"
-  }
-}
-
-function medicationAbleInput() {
-  input = document.getElementById("medication-input")
-
-  if (input.style.display == "none") {
-    input.style.display = "block"
-  }
-}
-
-function medicationDisableInput() {
-  input = document.getElementById("medication-input")
-
-  if (input.style.display == "block") {
-    input.style.display = "none"
-  }
-}
