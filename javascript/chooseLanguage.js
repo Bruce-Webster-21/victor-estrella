@@ -31,6 +31,7 @@ const buttocksP = document.getElementById("buttocks-p");
 const other = document.getElementById("other");
 const otherP = document.getElementById("other-p");
 
+const aboutH1 = document.getElementById("about-h-1")
 const aboutP1 = document.getElementById("about-p-1")
 const aboutP2 = document.getElementById("about-p-2")
 const aboutP3 = document.getElementById("about-p-3")
@@ -146,6 +147,10 @@ const websiteTxt = [
     elementToStr: "otherP",
   },
   /*---------------------------------------*/
+  {
+    element: aboutH1,
+    elementToStr: "aboutH1",
+  },
   {
     element: aboutP1,
     elementToStr: "aboutP1",
@@ -263,6 +268,7 @@ const websiteData = {
     otherP:
       "You also have the option to undergo non-surgical treatments for facial rejuvenation. Botox is the injectable medical-aesthetic treatment we utilize to effectively combat wrinkles and diminish the signs of aging.",
     /*----------------------------------------------------------*/
+    aboutH1: "About",
     aboutP1: "Dr. Victor Rabiere Estrella Ventura is a highly specialized physician in plastic, aesthetic, and reconstructive surgery. With a strong academic background from the Autonomous University of Santo Domingo and over a decade of experience in various prestigious institutions, Dr. Victor Estrella is an expert in aesthetic and functional surgery. Additionally, he is a member of the Dominican Society of Plastic, Aesthetic, and Reconstructive Surgery (SODOCIPRE), which promotes the continuous medical education of its members.",
     aboutP2: "Dr. Victor Estrella specializes in general surgery and minimally invasive approaches, with a focus on hand trauma, congenital malformations, facial surgery, and liposculpture. He offers a wide range of surgical procedures, including facial aesthetic surgery, hand surgery, craniofacial surgery, liposculpture, and the correction of congenital anomalies. He also provides services in aesthetic medicine, such as lip augmentation and alopecia treatment.",
     aboutP3: "His office is located at IPBMA Medical Associates in Gazcue, Santo Domingo, National District. If you are seeking quality medical care in the Dominican Republic, do not hesitate to contact us for more information and to embark on your transformation. Discover the benefits of receiving medical attention at our facilities.",
@@ -308,6 +314,7 @@ const websiteData = {
     otherP:
       "También tienes la opción de someterte a tratamientos no quirúrgicos de rejuvenecimiento facial. El Botox es el tratamiento médico-estético inyectable que utilizamos para combatir eficazmente las arrugas y disminuir los signos del envejecimiento.",
     /*----------------------------------------------------------*/
+    aboutH1: "Sobre mi",
     aboutP1: "El Dr. Victor Rabiere Estrella Ventura es un médico altamente especializado en cirugía plástica, estética y reconstructiva. Con una sólida formación académica en la Universidad Autónoma de Santo Domingo y más de una década de experiencia en diversas instituciones prestigiosas, el Dr. Victor Estrella es un experto en cirugía estética y funcional. Además, es miembro de la Sociedad Dominicana de Cirugía Plástica, Estética y Reconstructiva (SODOCIPRE), la cual promueve la educación médica continua de sus miembros.",
     aboutP2: "El Dr. Victor Estrella se especializa en cirugía general y abordajes mínimamente invasivos, con enfoque en trauma de mano, malformaciones congénitas, cirugía facial y lipoescultura. Ofrece una amplia gama de procedimientos quirúrgicos, incluyendo cirugía estética facial, de la mano, craneofacial, lipoescultura y corrección de anomalías congénitas. También brinda servicios de medicina estética como el aumento de labios y tratamiento de alopecia.",
     aboutP3: "Su consultorio está ubicado en IPBMA Medical Associates, en Gazcue, Santo Domingo, Distrito Nacional. Si buscas atención médica de calidad en República Dominicana, no dudes en contactarnos para obtener más información y dar inicio a tu transformación. Descubre los beneficios de recibir atención médica en nuestras instalaciones.",
@@ -353,6 +360,7 @@ const websiteData = {
     otherP:
       "Vous avez également la possibilité de subir des traitements de rajeunissement du visage non chirurgicaux. Le Botox est le traitement médico-esthétique injectable que nous utilisons pour lutter efficacement contre les rides et réduire les signes du vieillissement.",
     /*----------------------------------------------------------*/
+    aboutH1: "Sur moi",
     aboutP1: "Le Dr. Victor Rabiere Estrella Ventura est un médecin hautement spécialisé en chirurgie plastique, esthétique et reconstructive. Avec une solide formation académique à l'Université autonome de Santo Domingo et plus d'une décennie d'expérience dans diverses institutions prestigieuses, le Dr. Victor Estrella est un expert en chirurgie esthétique et fonctionnelle. De plus, il est membre de la Société dominicaine de chirurgie plastique, esthétique et reconstructive (SODOCIPRE), laquelle promeut la formation médicale continue de ses membres.",
     aboutP2: "Le Dr. Victor Estrella est spécialisé en chirurgie générale et en approches peu invasives, avec un accent sur les traumatismes de la main, les malformations congénitales, la chirurgie faciale et la liposculpture. Il propose une large gamme de procédures chirurgicales, y compris la chirurgie esthétique du visage, de la main, cranio-faciale, la liposculpture et la correction d'anomalies congénitales. Il propose également des services de médecine esthétique tels que l'augmentation des lèvres et le traitement de la calvitie.",
     aboutP3: "Son cabinet se trouve à IPBMA Medical Associates, à Gazcue, à Santo Domingo, dans le district national. Si vous recherchez des soins médicaux de qualité en République dominicaine, n'hésitez pas à nous contacter pour obtenir plus d'informations et commencer votre transformation. Découvrez les avantages de recevoir des soins médicaux dans nos installations."
@@ -398,6 +406,7 @@ const websiteData = {
     otherP:
       "Você também tem a opção de se submeter a tratamentos de rejuvenescimento facial não cirúrgicos. O Botox é o tratamento médico-estético injetável que usamos para combater eficazmente as rugas e reduzir os sinais de envelhecimento.",
     /*----------------------------------------------------------*/
+    aboutH1: "Sobre mim",
     aboutP1: "O Dr. Victor Rabiere Estrella Ventura é um médico altamente especializado em cirurgia plástica, estética e reconstructiva. Com uma sólida formação acadêmica na Universidade Autônoma de Santo Domingo e mais de uma década de experiência em várias instituições prestigiosas, o Dr. Victor Estrella é um especialista em cirurgia estética e funcional. Além disso, ele é membro da Sociedade Dominicana de Cirurgia Plástica, Estética e Reconstructiva (SODOCIPRE), que promove a educação médica contínua de seus membros.",
     aboutP2: "O Dr. Victor Estrella é especializado em cirurgia geral e abordagens minimamente invasivas, com foco em trauma de mão, malformações congênitas, cirurgia facial e lipoescultura. Ele oferece uma ampla gama de procedimentos cirúrgicos, incluindo cirurgia estética facial, de mão, craniofacial, lipoescultura e correção de anomalias congênitas. Ele também fornece serviços de medicina estética, como aumento dos lábios e tratamento da alopecia.",
     aboutP3: "Seu consultório está localizado no IPBMA Medical Associates, em Gazcue, Santo Domingo, Distrito Nacional. Se você procura atendimento médico de qualidade na República Dominicana, não hesite em entrar em contato conosco para obter mais informações e iniciar sua transformação. Descubra os benefícios de receber atendimento médico em nossas instalações."
