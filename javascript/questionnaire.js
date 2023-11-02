@@ -33,7 +33,7 @@ function sendEmail() {
   .send(serviceID, templateID, params)
   .then(
     res => {
-      /*
+      
       document.getElementById("name").value = ""
       document.getElementById("email").value = ""
       document.getElementById("phone-number").value = ""
@@ -45,9 +45,12 @@ function sendEmail() {
         input.checked = false
       })
       document.getElementById("date-of-surgery").value = ""
-      */
+      document.querySelectorAll(".checkbox-input").forEach(input => {
+        input.checked = false
+      })
       console.log(res)
       alert("Message Sent")
+      document.getElementById("thank-you-page").style.display = "flex"
     })
     .catch(error => console.log(error))
 }
